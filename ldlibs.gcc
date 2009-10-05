@@ -1,6 +1,3 @@
--pthread
--rpath /usr/local/lib/gcc44
--L/usr/local/lib
 -lboost_regex
 -lboost_filesystem
 -lboost_thread
