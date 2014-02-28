@@ -100,9 +100,9 @@ mkre(std::string const& e) // {{{
     return re(e, re::perl | re::icase);
 } // }}}
 bool
-matches(std::string const& s, std::string const& re) // {{{
+matches(std::string const& s, std::string const& sex) // {{{
 {
-    return static_cast<bool>(regex_match(s, mkre(re)));
+    return static_cast<bool>(regex_match(s, mkre(sex)));
 } // }}}
 std::string
 torfc1123(ti::ptime const& t) // {{{
