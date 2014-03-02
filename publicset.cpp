@@ -33,6 +33,7 @@
 #include <algorithm>
 #include <map>
 #include <locale>
+#include <memory>
 #include <utility>
 #include <cstddef>
 
@@ -109,9 +110,9 @@ torfc1123(ti::ptime const& t) // {{{
 {
     std::string rv("");
     std::stringstream ss(rv);
-    ti::time_facet* f = new ti::time_facet();
+    std::unique_ptr<ti::time_facet> f(new ti::time_facet());
     f->format("%a, %d %b %Y %T GMT");
-    ss.imbue(std::locale(std::locale::classic(), f));
+    ss.imbue(std::locale(std::locale::classic(), f.get()));
     ss << t;
     return ss.str();
 } // }}}
