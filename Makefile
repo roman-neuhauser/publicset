@@ -1,5 +1,5 @@
-CXX=env CXX=g++44 gfilt -banner:N -hdr:LD2 -cand:M
-CXX=g++44
+CXX=env CXX=g++ gfilt -banner:N -hdr:LD2 -cand:M
+CXX=g++
 CXXFLAGS=-std=c++0x -O3 @warn.gcc @feat.gcc @cppf.gcc
 LDFLAGS=@ldflags.gcc
 LDLIBS=@ldlibs.gcc

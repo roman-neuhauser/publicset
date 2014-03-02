@@ -1,3 +1,1 @@
 -pthread
--rpath /usr/local/lib/gcc44
--L/usr/local/lib
